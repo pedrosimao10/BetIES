@@ -1,6 +1,18 @@
 # ProjetoIES
 Projeto Final de IES
 
+## Concept:
+Each group is expected to propose, conceptualize, and implement a multi-layer, enterprise-class application. 
+We decided to do a Betting Web Application where the user can place bets and each odd is constantly being updated. To do this we developed a Data Genarator.
+
+## Technologies Used:
+- HTML;
+- CSS;
+- JavaScript;
+- Python;
+- Java;
+- Thymeleaf.
+
 ## Roles:
 
 - Team Manager: Afonso Rodrigues (NMEC: 93124)
