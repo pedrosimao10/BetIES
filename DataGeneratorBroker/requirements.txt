@@ -1,0 +1,8 @@
+pika
+pypika
+mysqlclient
+mysql-connector-python
+mysql
+pyodbc
+mysql-connector-python-rf
+mysql-connector
