@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   </head>
+   <body>
+      <div>
+         <div id="mySidenav" class="sidenav">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+             <a href="futebol.html">Futebol</a>
+             <a href="basquetebolEmployees.html">Basquetebol</a>
+             <a href="futebol_americanoEmployee.html">Futebol Americano</a>
+             <a href="conta.html">A minha conta</a>
+             <span onclick="openNav()"></span>
+         </div>
+             <div class="topnav">
+                 <span  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                 <a style="text-align: center;" href="employee.html">BetIES</a>
+                 <a style="float: right;" onclick="document.getElementById('id02').style.display='block'" >Register</a>
+                 <a style="float: right;" onclick="document.getElementById('id01').style.display='block'">Login</a>
+             </div>
+         </div>
+
+         <!-- Login Modal Content -->
+         <div id="id01" class="modal1 container" style="display: none;">
+             <form class="modal-content animate" action="/action_page.php">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                 <div class="imgcontainer">
+                     <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+                 </div>
+                 <div class="container">
+                     <label for="uname"><b>Username</b></label>
+                     <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                     <label for="psw"><b>Password</b></label>
+                     <input type="password" placeholder="Enter Password" name="psw" required>
+                 
+                     <button type="submit">Login</button>
+                 </div>
+                 <div class="container" style="background-color:#f1f1f1">
+                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                 </div>
+             </form>
+         </div>
+
+         <!-- Register Modal Content -->
+         <div id="id02" class="modal2 container" style="display: none;">
+             <form class="modal-content animate" action="/action_page.php">
+                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+             <div class="imgcontainer">
+                 <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+             </div>
+             <div class="container">
+                 <label for="uname"><b>Username</b></label>
+                 <input type="text" placeholder="Enter Username" name="uname" required>
+             
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+
+                 <label for="email"><b>Email</b></label>
+                 <input type="text" placeholder="Enter Email" name="email" required>
+
+                 <label for="nif"><b>NIF</b></label>
+                 <input type="text" placeholder="Enter NIF" name="nif" required>
+
+                 <label for="bday"><b>Birthday</b></label>
+                 <input type="text" placeholder="Enter Birthday" name="bday" required>
+             
+                 <button type="submit">Register</button>
+             </div>
+             <div class="container" style="background-color:#f1f1f1">
+                 <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+             </div>
+             </form>
+         </div>
+      </div>
+      <div class="container mt-3 mb-4">
+         <div class="col-lg-9 mt-4 mt-lg-0">
+             <div class="row">
+               <div class="col-md-12">
+                 <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+                   <table class="table manage-candidates-top mb-0">
+                     <thead>
+                       <tr>
+                         <th>Jogo</th>
+                         <th class="text-center">Nº Apostas</th>
+                         <th class="action text-right">Mercado mais apostado</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr class="candidates-list">
+                         <td class="title">
+                           <div class="thumb">
+                           </div>
+                           <div class="candidate-list-details">
+                             <div class="candidate-list-info">
+                               <div class="candidate-list-title">
+                                 <h5>Leça x Sporting</h5>
+                               </div>
+                               <div class="candidate-list-option">
+                                 <ul class="list-unstyled">
+                                   <li><i class="fas fa-clock pr-1"></i>11 jan 20h45</li>
+                                 </ul>
+                               </div>
+                             </div>
+                           </div>
+                         </td>
+                         <td class="candidate-list-favourite-time text-center">
+                           <h6>81</h6>
+                         </td>
+                         <td>
+                           <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                             <h6>TR Sporting</h6>
+                           </ul>
+                         </td>
+                       </tr>
+                       <tr class="candidates-list">
+                        <td class="title">
+                          <div class="thumb">
+                          </div>
+                          <div class="candidate-list-details">
+                            <div class="candidate-list-info">
+                              <div class="candidate-list-title">
+                                <h5>Vizela x FC Porto</h5>
+                              </div>
+                              <div class="candidate-list-option">
+                                <ul class="list-unstyled">
+                                  <li><i class="fas fa-clock pr-1"></i>12 jan 21h45</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="candidate-list-favourite-time text-center">
+                          <h6>60</h6>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                            <h6>TR FC Porto</h6>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="candidates-list">
+                        <td class="title">
+                          <div class="thumb">
+                          </div>
+                          <div class="candidate-list-details">
+                            <div class="candidate-list-info">
+                              <div class="candidate-list-title">
+                                <h5>Manchester City x Chelsea</h5>
+                              </div>
+                              <div class="candidate-list-option">
+                                <ul class="list-unstyled">
+                                  <li><i class="fas fa-clock pr-1"></i>15 jan 12h30</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="candidate-list-favourite-time text-center">
+                          <h6>33</h6>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                            <h6>TR Empate</h6>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="candidates-list">
+                        <td class="title">
+                          <div class="thumb">
+                          </div>
+                          <div class="candidate-list-details">
+                            <div class="candidate-list-info">
+                              <div class="candidate-list-title">
+                                <h5>AC Milan x Juventus</h5>
+                              </div>
+                              <div class="candidate-list-option">
+                                <ul class="list-unstyled">
+                                  <li><i class="fas fa-clock pr-1"></i>23 jan 19h45</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="candidate-list-favourite-time text-center">
+                          <h6>30</h6>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                            <h6>Ambas Marcam</h6>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="candidates-list">
+                        <td class="title">
+                          <div class="thumb">
+                          </div>
+                          <div class="candidate-list-details">
+                            <div class="candidate-list-info">
+                              <div class="candidate-list-title">
+                                <h5>Marselha x Lille</h5>
+                              </div>
+                              <div class="candidate-list-option">
+                                <ul class="list-unstyled">
+                                  <li><i class="fas fa-clock pr-1"></i>16 jan 19h45</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="candidate-list-favourite-time text-center">
+                          <h6>30</h6>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                            <h6>INT Empate</h6>
+                          </ul>
+                        </td>
+                      </tr>
+                     </tbody>
+                   </table>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+   </body>
+      <script>
+         function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+         }
+         function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.marginLeft = "0px";
+            document.body.style.backgroundColor = "white";
+         }
+         
+         var modal1 = document.getElementById('id01');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            if (event.target == modal1) {
+               modal1.style.display = "none";
+            }
+         }
+
+         var modal2 = document.getElementById('id02');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            if (event.target == modal2) {
+               modal2.style.display = "none";
+            }
+         }
+         function myFunction(id) {
+         document.getElementById(id).classList.toggle("show");
+         }
+
+         // Close the dropdown menu if the user clicks outside of it
+         window.onclick = function(event) {
+         if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+               }
+            }
+         }
+         }
+
+         function eventsShow(id,name){
+            document.getElementById(id).style.display='block';
+         }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+   </body>
+</html>

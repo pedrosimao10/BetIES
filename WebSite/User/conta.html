@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+      <div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="futebol.html">Futebol</a>
+             <a href="basquetebol.html">Basquetebol</a>
+             <a href="futebol_americano.html">Futebol Americano</a>
+             <a href="conta.html">A minha conta</a>
+             <a href="about.html">About</a>
+             <a href="faq.html">FAQ</a>
+             <a href="contact.html">Contact</a>
+            <span onclick="openNav()"></span>
+        </div>
+            <div class="topnav">
+                <span  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <a style="text-align: center;" href="user.html">BetIES</a>
+                <a style="float: right;" onclick="document.getElementById('id02').style.display='block'">Register</a>
+                <a style="float: right;" onclick="document.getElementById('id01').style.display='block'">Login</a>
+            </div>
+        </div>
+        <!-- Login Modal Content -->
+        <div id="id01" class="modal1 container" style="display: none;">
+          <form class="modal-content animate" action="/action_page.php">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <div class="imgcontainer">
+                  <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <button type="submit">Login</button>
+              </div>
+              <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+          </form>
+        </div>
+
+        <!-- Register Modal Content -->
+        <div id="id02" class="modal2 container" style="display: none;">
+          <form class="modal-content animate" action="/action_page.php">
+              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div class="imgcontainer">
+                <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="nif"><b>NIF</b></label>
+                <input type="text" placeholder="Enter NIF" name="nif" required>
+
+                <label for="bday"><b>Birthday</b></label>
+                <input type="text" placeholder="Enter Birthday" name="bday" required>
+            
+                <button type="submit">Register</button>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+        <div class="container">
+            <div class="main">
+                <div class="row">
+                    <div class="col-md-4 mt-1">
+                        <div class="card text-center sidebar">
+                            <div class="card-body">
+                                <img src="imagesUser/img_avatar1.png" class="rounded-circle" width="150">
+                                    <div class="mt-3">
+                                        <h3>Utilizador</h3>
+                                        <a href="">Logout</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-1">
+                        <div class="card mb-3 content">
+                            <h1 class="m-3 pt-3">Sobre</h1>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Full Name</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        Utilizador
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Email</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        utilizador@gmail.com
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Telefone</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        912345678
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Morada</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        Rua de IES
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-1">
+                        
+                    </div>
+                    <div class="col-md-8 mt-1">
+                        <div class="card mb-3 content">
+                            <h1 class="m-3 pt-3">Historial de Apostas</h1>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Número Total de Apostas</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        Nenhuma
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-1">
+                        
+                    </div>
+                    <div class="col-md-8 mt-1">
+                        <div class="card mb-3 content">
+                            <h1 class="m-3 pt-3">Saldo</h1>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Saldo disponível</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        0.00€
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Lucro total</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        0.00€
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Dinheiro total apostado</h5>
+                                    </div>
+                                    <div class="col-md-8 text-secondary">
+                                        0.00€
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+      
+      <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+          }
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+          }
+
+          var modal1 = document.getElementById('id01');
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal1) {
+              modal1.style.display = "none";
+            }
+          }
+
+          var modal2 = document.getElementById('id02');
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal2) {
+              modal2.style.display = "none";
+            }
+          }
+      </script>
+    </body>
+</html>

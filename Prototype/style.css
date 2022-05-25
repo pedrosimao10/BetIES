@@ -1,0 +1,10 @@
+.rounded_corners1 {
+    border-radius: 10px;
+    border: 2px solid red;
+}
+
+.rounded_corners2 {
+    border-radius: 10px;
+    border: 2px solid red;
+    padding: 5px; 
+}

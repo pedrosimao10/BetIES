@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   </head>
+   <body>
+      <div>
+         <div id="mySidenav" class="sidenav">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+             <a href="futebol.html">Futebol</a>
+             <a href="basquetebol.html">Basquetebol</a>
+             <a href="futebol_americano.html">Futebol Americano</a>
+             <a href="conta.html">A minha conta</a>
+             <a href="about.html">About</a>
+             <a href="faq.html">FAQ</a>
+             <a href="contact.html">Contact</a>
+             <span onclick="openNav()"></span>
+         </div>
+             <div class="topnav">
+                 <span  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                 <a style="text-align: center;" href="user.html">BetIES</a>
+                 <a style="float: right;" onclick="document.getElementById('id02').style.display='block'" >Register</a>
+                 <a style="float: right;" onclick="document.getElementById('id01').style.display='block'">Login</a>
+             </div>
+         </div>
+
+         <!-- Login Modal Content -->
+         <div id="id01" class="modal1 container" style="display: none;">
+             <form class="modal-content animate" action="/action_page.php">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                 <div class="imgcontainer">
+                     <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+                 </div>
+                 <div class="container">
+                     <label for="uname"><b>Username</b></label>
+                     <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                     <label for="psw"><b>Password</b></label>
+                     <input type="password" placeholder="Enter Password" name="psw" required>
+                 
+                     <button type="submit">Login</button>
+                 </div>
+                 <div class="container" style="background-color:#f1f1f1">
+                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                 </div>
+             </form>
+         </div>
+
+         <!-- Register Modal Content -->
+         <div id="id02" class="modal2 container" style="display: none;">
+             <form class="modal-content animate" action="/action_page.php">
+                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+             <div class="imgcontainer">
+                 <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+             </div>
+             <div class="container">
+                 <label for="uname"><b>Username</b></label>
+                 <input type="text" placeholder="Enter Username" name="uname" required>
+             
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+
+                 <label for="email"><b>Email</b></label>
+                 <input type="text" placeholder="Enter Email" name="email" required>
+
+                 <label for="nif"><b>NIF</b></label>
+                 <input type="text" placeholder="Enter NIF" name="nif" required>
+
+                 <label for="bday"><b>Birthday</b></label>
+                 <input type="text" placeholder="Enter Birthday" name="bday" required>
+             
+                 <button type="submit">Register</button>
+             </div>
+             <div class="container" style="background-color:#f1f1f1">
+                 <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+             </div>
+             </form>
+         </div>
+      </div>
+       <div>
+         <h5>Eventos de Futebol</h5>
+         <div class="dropdown">
+            <button onclick="myFunction('myDropdownPortugal')" class="dropbtn">Portugal</button>
+            <div id="myDropdownPortugal" class="dropdown-content">
+            <a href="#" onclick="eventsShow('eventosTaçaPortugal','eventos')">Taça de Portugal</a>
+            <a href="#" onclick="eventsShow('eventosLigaPortugal','eventos')">Liga Portugal</a>
+            </div>
+         </div>
+         <div class="dropdown">
+            <button onclick="myFunction('myDropdownEngland')" class="dropbtn">Inglaterra</button>
+            <div id="myDropdownEngland" class="dropdown-content">
+            <a href="#" onclick="eventsShow('eventosTaçaInglaterra','eventos')">EFL Cup</a>
+            <a href="#" onclick="eventsShow('eventosLigaInglaterra','eventos')">Premier League</a>
+            </div>
+         </div>
+         <div class="dropdown">
+            <button onclick="myFunction('myDropdownSpain')" class="dropbtn">Espanha</button>
+            <div id="myDropdownSpain" class="dropdown-content">
+            <a href="#" onclick="eventsShow('eventosLigaEspanhola','eventos')">Liga Espanhola</a>
+            </div>
+         </div>
+         <div class="dropdown">
+            <button onclick="myFunction('myDropdownItaly')" class="dropbtn">Itália</button>
+            <div id="myDropdownItaly" class="dropdown-content">
+            <a href="#" onclick="eventsShow('eventosLigaItaliana','eventos')">Serie A</a>
+            </div>
+         </div>
+         <div class="dropdown">
+            <button onclick="myFunction('myDropdownFrance')" class="dropbtn">França</button>
+            <div id="myDropdownFrance" class="dropdown-content">
+            <a href="#" onclick="eventsShow('eventosLigaFrancesa','eventos')">Liga Francesa</a>
+            </div>
+         </div>
+         <div class="dropdown">
+            <button onclick="myFunction('myDropdownGermany')" class="dropbtn">Alemanha</button>
+            <div id="myDropdownGermany" class="dropdown-content">
+            <a href="#" onclick="eventsShow('eventosLigaAlemã','eventos')">Bundesliga</a>
+            </div>
+         </div>
+        </div>
+         <div id='eventosTaçaPortugal' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosTaçaPortugal').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Leça</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Sporting</h5>
+               <p>11 jan, 21h45</p>
+               <h6>Tempo Regulamentar</h6>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">16.50</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">7.60</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.10</button>
+               <h6>Intervalo</h6>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">8.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">4.95</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.40</button>
+               <h6>DV</h6>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;"> (+2) 2.50</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.86</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.10</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Rio Ave FC</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Tondela</h5>
+               <p>12 jan, 19h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.42</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.10</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.75</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">FC Vizela</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">FC Porto</h5>
+               <p>12 jan, 21h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">9.50</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">5.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.25</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Portimonense</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Mafra</h5>
+               <p>13 jan, 21h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.82</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.20</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">4.25</button>
+            </div>
+            <hr/>
+         </div>
+
+         <div id='eventosLigaPortugal' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosLigaPortugal').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Benfica</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Moreirense</h5>
+               <p>15 jan, 18h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.16</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">6.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">14.10</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Vizela</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Sporting</h5>
+               <p>16 jan, 18h00</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">7.42</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">5.10</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.31</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Belenenses</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">FC Porto</h5>
+               <p>16 jan, 20h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">13.50</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">6.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.15</button>
+            </div>
+         </div>
+
+         <div id='eventosTaçaInglaterra' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosTaçaInglaterra').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Liverpool</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Arsenal</h5>
+               <p>36 jan, 19h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.10</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.25</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">4.50</button>
+            </div>
+         </div>
+
+         <div id='eventosLigaInglaterra' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosLigaInglaterra').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Manchester City</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Chelsea</h5>
+               <p>15 jan, 12h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.55</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.80</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">5.30</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Tottenham</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Arsenal</h5>
+               <p>16 jan, 16h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.40</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.20</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.55</button>
+            </div>
+         </div>
+   
+         <div id='eventosLigaEspanhola' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosLigaEspanhola').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Barcelona</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Rayo Vallecano</h5>
+               <p>19 jan, 17h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.47</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">4.15</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">6.10</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Valencia</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Sevilla</h5>
+               <p>19 jan, 20h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.90</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.25</button>
+            </div>
+         </div>
+   
+         <div id='eventosLigaItaliana' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosLigaItaliana').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Lazio</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Atalanta</h5>
+               <p>22 jan, 19h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.20</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.90</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">AC Milan</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Juventus</h5>
+               <p>23 jan, 19h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.10</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.40</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.75</button>
+            </div>
+         </div>
+   
+         <div id='eventosLigaFrancesa' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosLigaFrancesa').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">PSG</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Brest</h5>
+               <p>15 jan, 20h00</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.17</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">7.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">12.50</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Marselha</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Lille</h5>
+               <p>16 jan, 19h45</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.20</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">3.20</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">2.90</button>
+            </div>
+         </div>
+   
+         <div id='eventosLigaAlemã' name='eventos' style="display: none;">
+            <button type="button" onclick="document.getElementById('eventosLigaAlemã').style.display='none'" class="cancelbtn">Close</button>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">Dortmund</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Freiburg</h5>
+               <p>14 jan, 19h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.50</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">4.40</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">5.40</button>
+            </div>
+            <hr/>
+            <div class="col-12 row" style="margin-bottom:1%;">
+               <h5 class="col-2">FC Koln</h5>
+               <h5 class="col-1">x</h5>
+               <h5 class="col-2">Bayern Munchen</h5>
+               <p>15 jan, 14h30</p>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">8.00</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">5.70</button>
+               <button type="button" class="btn btn-outline-secondary col-1" style="margin-left:0.5%;margin-right:0.5%;">1.28</button>
+            </div>
+         </div>
+       </div>
+
+   </body>
+      <script>
+         function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+         }
+         function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.marginLeft = "0px";
+            document.body.style.backgroundColor = "white";
+         }
+         
+         var modal1 = document.getElementById('id01');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            if (event.target == modal1) {
+               modal1.style.display = "none";
+            }
+         }
+
+         var modal2 = document.getElementById('id02');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            if (event.target == modal2) {
+               modal2.style.display = "none";
+            }
+         }
+         function myFunction(id) {
+         document.getElementById(id).classList.toggle("show");
+         }
+
+         // Close the dropdown menu if the user clicks outside of it
+         window.onclick = function(event) {
+         if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+               }
+            }
+         }
+         }
+
+         function eventsShow(id,name){
+            document.getElementById(id).style.display='block';
+         }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+   </body>
+</html>

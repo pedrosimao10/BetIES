@@ -1,0 +1,17 @@
+ssh pedro.simao10@deti-engsoft-17
+ls -la
+
+docker exec -it  projetoies_dataBase_1 bash
+
+
+
+scp -r betIES-0.0.1-SNAPSHOT.jar pedro.simao10@deti-engsoft-17:ProjetoIES/betIES/target
+scp -r DataGeneratorBroker pedro.simao10@deti-engsoft-17:ProjetoIES
+
+
+ping deti-engsoft-17
+copiar ping, meter :porta e barras
+
+http://192.168.160.196:2020/user/user
+http://192.168.160.196:2020/employee/employee
+http://192.168.160.196:2020/admin/admin

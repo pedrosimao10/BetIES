@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   </head>
+   <body>
+      <div>
+         <div id="mySidenav" class="sidenav">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+             <a href="futebol.html">Futebol</a>
+             <a href="basquetebol.html">Basquetebol</a>
+             <a href="futebol_americano.html">Futebol Americano</a>
+             <a href="conta.html">A minha conta</a>
+             <a href="about.html">About</a>
+             <a href="faq.html">FAQ</a>
+             <a href="contact.html">Contact</a>
+             <span onclick="openNav()"></span>
+         </div>
+             <div class="topnav">
+                 <span  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                 <a style="text-align: center;" href="user.html">BetIES</a>
+                 <a style="float: right;" href="register.html" >Register</a>
+                 <a style="float: right;" href="login.html">Login</a>
+             </div>
+         </div>
+
+         <!-- Login Modal Content -->
+         <div id="id01" class="modal1 container" style="display: none;">
+             <form class="modal-content animate" action="/action_page.php">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                 <div class="imgcontainer">
+                     <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+                 </div>
+                 <div class="container">
+                     <label for="uname"><b>Username</b></label>
+                     <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                     <label for="psw"><b>Password</b></label>
+                     <input type="password" placeholder="Enter Password" name="psw" required>
+                 
+                     <button type="submit">Login</button>
+                 </div>
+                 <div class="container" style="background-color:#f1f1f1">
+                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                 </div>
+             </form>
+         </div>
+
+         <!-- Register Modal Content -->
+         <div id="id02" class="modal2 container" style="display: none;">
+             <form class="modal-content animate" action="/action_page.php">
+                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+             <div class="imgcontainer">
+                 <img style="height: 100px; width: 100px; text-align: center;" src="imagesUser/img_avatar1.png" alt="Avatar" class="avatar">
+             </div>
+             <div class="container">
+                 <label for="uname"><b>Username</b></label>
+                 <input type="text" placeholder="Enter Username" name="uname" required>
+             
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+
+                 <label for="email"><b>Email</b></label>
+                 <input type="text" placeholder="Enter Email" name="email" required>
+
+                 <label for="nif"><b>NIF</b></label>
+                 <input type="text" placeholder="Enter NIF" name="nif" required>
+
+                 <label for="bday"><b>Birthday</b></label>
+                 <input type="text" placeholder="Enter Birthday" name="bday" required>
+             
+                 <button type="submit">Register</button>
+             </div>
+             <div class="container" style="background-color:#f1f1f1">
+                 <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+             </div>
+             </form>
+         </div>
+      </div>
+      <div id="fullpage">
+         <!-- Carousel -->
+         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="imagesUser/homeLiverpool.jpg" class="d-block w-100" alt="...">
+               <div class="carousel-caption">
+                  <h3>Reds mantêm grande forma na Carabao Cup?</h3>
+                  <p>EFL Cup - Liverpool x Leicester City</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="imagesUser/homeSporting.jpg" class="d-block w-100" alt="...">
+               <div class="carousel-caption">
+                  <h3>Festa da Taça está de volta!</h3>
+                  <p>Taça de Portugal - Casa Pia x Sporting CP</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="imagesUser/homeBenfica.jpg" class="d-block w-100" alt="...">
+               <div class="carousel-caption">
+                  <h3>Há clássico dos clássicos na Taça</h3>
+                  <p>Taça de Portugal - FC Porto x SL Benfica</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="imagesUser/homeNeemias.jpg" class="d-block w-100" alt="...">
+               <div class="carousel-caption">
+                  <h3>Neemias com mais minutos?</h3>
+                  <p>NBA - Sacramento Kings x Los Angeles Clippers</p>
+               </div>
+            </div> 
+         </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+         </div>
+         <!-- Carousel Finish -->
+         <div class="container">
+            <h2 style="text-align: center;">Aposta já nos jogos mais concorridos: </h2>
+            <br>
+            <div class="card text-center">
+               <div class="card-header" style="background-color: rgb(163, 163, 163)">
+                  Futebol
+               </div>
+               <div class="card-body">
+                 <h5 class="card-title">AC Milan x Juventus</h5>
+                 <p class="card-text">Um jogo muito importante para ambas as equipas. Por um lado, o AC Milan procura chegar perto da primeira posição do campeonato. Por outro lado, a Juventus, que não começou muito bem o campeonato, tem vindo a praticar um excelente futebol e procurar entrar nos lugares com bilhete direto para a Liga dos Campeões.</p>
+                 <a href="futebol.html" class="btn btn-primary">Aposte já</a>
+               </div>
+               <div class="card-footer text-muted">
+                 Futebol -> Itália -> Serie A
+               </div>
+            </div>
+            <br>
+            <div class="card text-center">
+               <div class="card-header"  style="background-color: rgb(163, 163, 163)">
+                 Futebol
+               </div>
+               <div class="card-body">
+                 <h5 class="card-title">Manchester City x Chelsea</h5>
+                 <p class="card-text">Jogo a contar para a Taça da Liga Inglesa com duas equipas em excelente forma. Com o Manchester City a jogar em casa mas com algumas baixas, será esta uma boa oportunidade para o Chelsea levar a melhor? </p>
+                 <a href="futebol.html" class="btn btn-primary">Aposte já</a>
+               </div>
+               <div class="card-footer text-muted">
+                  Futebol -> Inglaterra -> EFL Cup
+               </div>
+            </div>
+            <br>
+            <div class="card text-center">
+               <div class="card-header"  style="background-color: rgb(163, 163, 163)">
+                  Basquetebol
+               </div>
+               <div class="card-body">
+                 <h5 class="card-title"> New Orleans Pelicans x Golden State Warriors</h5>
+                 <p class="card-text">Conseguirá a equipa de LeBron e Curry levar a melhor fora de casa e continuar com a sequência de resultados positivos?</p>
+                 <a href="basquetebol.html" class="btn btn-primary">Aposte já</a>
+               </div>
+               <div class="card-footer text-muted">
+                  Basquetebol -> Estados Unidos -> NBA
+               </div>
+            </div>
+            <br>
+            <div class="card text-center">
+               <div class="card-header"  style="background-color: rgb(163, 163, 163)">
+                  Basquetebol
+               </div>
+               <div class="card-body">
+                 <h5 class="card-title">Estrela Vermelha x Fenerbahce</h5>
+                 <p class="card-text">A equipa visitante aspira a um lugar de qualificação, mas na Sérvia manda o Estrela.</p>
+                 <a href="basquetebol.html" class="btn btn-primary">Aposte já</a>
+               </div>
+               <div class="card-footer text-muted">
+                  Basquetebol -> Europa -> Liga Europeia
+               </div>
+            </div>
+            <br>
+            <div class="card text-center">
+               <div class="card-header"  style="background-color: rgb(163, 163, 163)">
+                 Futebol Americano
+               </div>
+               <div class="card-body">
+                 <h5 class="card-title">Denver Broncos x Kansas City Chiefs</h5>
+                 <p class="card-text">Os Chiefs seguem na liderança e vão a um terreno de boas lembranças. Conseguirão dilatar a vantagem para o segundo classificado?</p>
+                 <a href="futebol_americano.html" class="btn btn-primary">Aposte já</a>
+               </div>
+               <div class="card-footer text-muted">
+                  Futebol Americano -> Estados Unidos -> NFL 
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+      <script>
+         function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+         }
+         function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.marginLeft = "0px";
+            document.body.style.backgroundColor = "white";
+         }
+         
+         var modal1 = document.getElementById('id01');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            if (event.target == modal1) {
+               modal1.style.display = "none";
+            }
+         }
+
+         var modal2 = document.getElementById('id02');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            if (event.target == modal2) {
+               modal2.style.display = "none";
+            }
+         }
+         function myFunction(id) {
+         document.getElementById(id).classList.toggle("show");
+         }
+
+         // Close the dropdown menu if the user clicks outside of it
+         window.onclick = function(event) {
+         if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+               }
+            }
+         }
+         }
+
+         function eventsShow(id,name){
+            document.getElementById(id).style.display='block';
+         }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+   </body>
+</html>
